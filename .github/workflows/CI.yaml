@@ -34,5 +34,9 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install -r requirements.txt
 
-      - name: Run Unit Tests
-        run: pytest
+      - name: Run Unit Tests and Generate XML Report
+        env:
+          REPORT_PATH: reports/pytest-report-$(date +"%Y%m%d_%H%M%S").xml
+        run: |
+          pytest --junitxml=$REPORT_PATH
+          echo "Generated XML report at $REPORT_PATH"
