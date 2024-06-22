@@ -1,4 +1,13 @@
-# Pytest
+# Automated Python Unit Tests
+
+This project sets up a CI pipeline using GitHub Actions to automate the execution of unit tests written in pytest for a Python project. The pipeline triggers on every push to the main branch and on pull requests targeting the main branch. It ensures that any changes made to the project are thoroughly tested, helping maintain code quality and preventing regressions.
+
+## Key Points:
+- **CI Pipeline**: Automated unit testing with pytest on GitHub Actions.
+- **Trigger**: Runs tests on every push to main and pull requests targeting main.
+- **Code Structure**: source/ for main project code and tests/ for unit tests.
+- **Workflow (ci.yml)**: Installs dependencies, runs pytest, and reports test results.
+- **Purpose**: Maintain code quality, prevent regressions, and support collaborative development.
 
 ## Files
 
