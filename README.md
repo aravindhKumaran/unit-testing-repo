@@ -6,7 +6,7 @@ This project sets up a CI pipeline using GitHub Actions to automate the executio
 - **CI Pipeline**: Automated unit testing with pytest on GitHub Actions.
 - **Trigger**: Runs tests on every push to main and pull requests targeting main.
 - **Code Structure**: source/ for main project code and tests/ for unit tests.
-- **Workflow (ci.yml)**: Installs dependencies, runs pytest, and reports test results.
+- **Workflow (ci.yml)**: Installs dependencies, runs pytest, and reports test results
 - **Purpose**: Maintain code quality, prevent regressions, and support collaborative development.
 
 ## Files
