@@ -34,17 +34,5 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install -r requirements.txt
 
-      - name: Run Unit Tests and Generate XML Report
-        id: run-tests
-        run: |
-          REPORT_PATH="reports/pytest-report-$(date +"%Y%m%d_%H%M%S").xml"
-          pytest --junitxml=$REPORT_PATH
-          echo "Generated XML report at $REPORT_PATH"
-          echo "::set-output name=report_path::$REPORT_PATH"  # Set the output variable
-
-      - name: Upload XML Report
-        if: always()
-        uses: actions/upload-artifact@v2
-        with:
-          name: pytest-reports
-          path: ${{ steps.run-tests.outputs.report_path }}
+      - name: Run Unit Tests
+        run: pytest --
