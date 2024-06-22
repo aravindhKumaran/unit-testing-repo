@@ -42,6 +42,7 @@ jobs:
         shell: bash
 
       - name: Upload XML Report
+        if: always()
         uses: actions/upload-artifact@v2
         with:
           name: pytest-reports
